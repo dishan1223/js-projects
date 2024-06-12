@@ -20,6 +20,31 @@ body{
   border: 1px solid black;
   padding: 20px;
   padding-top: 40px;
-  width: 320px;
   background: ghostwhite;
 }
+
+.add-task-container{
+  display:flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 2px solid black;
+  height: 33px;
+  margin-top: 40px;  
+}
+
+.add-btn{
+  font-size: 18px;
+  background: ghostwhite;
+  border: none;
+}
+.task-input{
+  border: none;
+  background: transparent;
+}
+.task-input:focus{
+  outline: none;
+}
+
+
+
+
