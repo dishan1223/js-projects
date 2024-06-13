@@ -21,6 +21,7 @@ body{
   padding-top: 40px;
   background: ghostwhite;
   width: 375px;
+  border: 1px solid black;
 }
 
 .add-task-container{
@@ -55,22 +56,32 @@ body{
 
 ul li{
   list-style: none;
-  padding-left: 23px;
-  font-size: 14px;
+  padding-left: 0px;
+  font-size: 16px;
   user-select: none;
   cursor: pointer;
+  padding-bottom: 9px;
 }
 ul li::before{
   content: '';
-  position: absolute;
-  height: 20px;
-  width: 20px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  background-image: url('public/unchecked.png');
-  background-size: cover;
+  display: inline-block;  
+  margin-right: 15px;
+  background: url('/unchecked.png');
+  background-size: cover;  
   background-position: center;
-  left: 20px;
 }
+ul li.checked{
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before{
+  background-image: url('/checked.png');
+}
+
+
 
 
 

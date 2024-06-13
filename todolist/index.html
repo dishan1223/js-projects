@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="/public/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/public/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
@@ -14,15 +14,12 @@
     <div class="todo-container">
       <h1 class="To-Do-head">To Do</h1>
       <div class="add-task-container">
-        <input class="task-input" type="text" placeholder="Add Task"></input>
-        <button class="add-btn">+</button>
+        <input id="input-box" class="task-input" type="text" placeholder="Add Task">
+        <button id="add-btn" class="add-btn">+</button>
       </div>
-      <ul class="list-container">
-        <li>Task 1</li> 
-        <li>Task 1</li> 
-        <li>Task 1</li> 
-      </ul>
+      <ul id="list-container" class="list-container"></ul>
     </div>
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
+
