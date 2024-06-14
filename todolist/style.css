@@ -13,6 +13,7 @@ body {
 }
 
 .To-Do-head {
+  color: white;
   font-weight: bold;
   font-size: 33px;
 }
@@ -20,7 +21,7 @@ body {
 .todo-container {
   padding: 20px;
   padding-top: 40px;
-  background: ghostwhite;
+  background: #2D3250;
   width: 375px;
   border: 1px solid black;
 }
@@ -30,14 +31,15 @@ body {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid white;
   height: 33px;
   margin-top: 40px;  
 }
 
 .add-btn {
   font-size: 18px;
-  background: ghostwhite;
+  background: transparent;
+  color: white;
   border: none;
   cursor: pointer;
 }
@@ -45,6 +47,13 @@ body {
 .task-input {
   border: none;
   background: transparent;
+  caret-color: white;
+  color: white;
+  font-size: 15px;
+}
+
+.task-input::placeholder{
+  color: white;
 }
 
 .task-input:focus {
@@ -67,6 +76,8 @@ ul li {
   user-select: none;
   cursor: pointer;
   padding-bottom: 9px;
+  color: white;
+  font-size: 20px;
 }
 
 ul li::before {
@@ -82,7 +93,7 @@ ul li::before {
 }
 
 ul li.checked {
-  color: #555;
+  color: #dae2e8;
   text-decoration: line-through;
 }
 
