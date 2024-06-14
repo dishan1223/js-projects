@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       let li = document.createElement('li');
       li.textContent = inputBox.value;
       listContainer.appendChild(li);
-      inputBox.value = ""; // Clear the input box after adding the task
+      inputBox.value = ""; 
     }
   }
 
