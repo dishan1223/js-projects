@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       li.appendChild(span);
     }
     inputBox.value = ""; 
+    saveDataToLocalStorage();
   }
 
   addButton.addEventListener('click', addTask);
@@ -22,10 +23,22 @@ document.addEventListener('DOMContentLoaded', () => {
   listContainer.addEventListener('click', function(e){
     if(e.target.tagName == 'LI'){
       e.target.classList.toggle('checked');
+      saveDataToLocalStorage();
     }
     else if(e.target.tagName === "SPAN"){
       e.target.parentElement.remove();
+      saveDataToLocalStorage();
     }
   }, false)
+
+  function saveDataToLocalStorage(){
+    localStorage.setItem("data", listContainer.innerHTML);
+  }
+
+  function showDataFromLocalStorage(){
+    listContainer.innerHTML = localStorage.getItem("data");
+  }
+
+  showDataFromLocalStorage();
 });
 
