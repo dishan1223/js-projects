@@ -19,7 +19,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px;
   background: #13A7F8;
   padding: 10px;
   width: 375px;
@@ -40,7 +39,12 @@ body {
   height: 50px;
   background: transparent;
   border: none;
+  margin-left: 10px;
 }
+#input-box::placeholder{
+  color: white;
+}
+
 button{
   height: 50px;
   background: transparent;
