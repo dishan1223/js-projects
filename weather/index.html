@@ -8,9 +8,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
-    <title>Weather Forcast</title>
+    <title>Weather Forecast</title>
   </head>
   <body>
+    <div class="app-container">
+      <p id="date">August 28,2024</p>
+      <div class="search-location">
+        <input id="input-box" type="text" placeholder="Search"> 
+        <button>Search</button>
+      </div>
+      <h1 id="location">Barcelona</h1>
+      <img src="images/mist.png" alt="Weather icon">
+      <h1 id="temperature">30°C</h1>
+      <p>Temperature</p>
+      <div class="bubble-bar">
+        
+        <div class="wind bubble-bar-item">
+          <div>
+            
+            
+          <p>0 km/h</p>
+          <p class="indicator">wind</p>
+          
+
+          </div>
+        </div>
+
+        <div class="humidity bubble-bar-item">
+          <div>
+            
+            
+          <p>60%</p>         
+          <p class="indicator">humidity</p>
+          
+          </div>
+       </div>
+
+      </div>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
+
