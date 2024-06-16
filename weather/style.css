@@ -57,6 +57,7 @@ button{
 #location {
   padding-top: 10px;
   margin-bottom: auto; /* Distribute space between items */
+  text-transform: uppercase;
 }
 
 
