@@ -54,7 +54,7 @@ button{
   margin-right: 10px;
 }
 
-#location {
+.location {
   padding-top: 10px;
   margin-bottom: auto; /* Distribute space between items */
   text-transform: uppercase;
@@ -66,7 +66,7 @@ img {
   margin-bottom: auto; /* Distribute space between items */
 }
 
-#temperature {
+.temperature {
   font-size: 80px;
   font-weight: 300;
   margin-bottom: 10px;
