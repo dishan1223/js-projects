@@ -7,7 +7,7 @@ async function searchNarutoDB(charName)
 {
 
   const response = await fetch(apiUrl + charName);
-  var data = await response.json();
+  let data = await response.json();
   console.log(data);
   
   let totalImgs = data.images.length;
