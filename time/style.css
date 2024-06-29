@@ -1,0 +1,19 @@
+*{
+  margin: 0px;
+  background: black;
+  color: white;
+}
+
+body{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app{
+  height: 100dvh;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
