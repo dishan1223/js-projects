@@ -4,7 +4,21 @@
   margin: 0px;
   font-family: "Poppins",sans-serif;
 }
-
-
+.app{
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#hexinput{
+  background: #D9D9D9;
+  height: 45px;
+  width: 303px;
+  border: none;
+  border-radius: 15px;
+  padding: 8px;
+  font-size: 20px;
+}
 
 
