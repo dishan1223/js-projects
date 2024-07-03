@@ -4,6 +4,13 @@
   font-family: 'Poppins', sans-serif;
 }
 
+
+.prevent-selection{
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 #app{
   height: 100dvh;
   width: 100%;
