@@ -3,7 +3,32 @@
 *{
   margin: 0px;
   font-family: "Poppins",sans-serif;
+  cursor: none;
 }
+
+/* custom cursor */
+.cursor-dot{
+  width: 5px;
+  height: 5px;
+  background-color: black;
+}
+.cursor-outline{
+  width: 30px;
+  height: 30px;
+  border: 2px solid black; 
+}
+.cursor-dot,
+.cursor-outline{
+  position: fixed; 
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
 .app{
   height: 100dvh;
   width: 100%;
@@ -27,5 +52,4 @@ button{
   height: 35px;
   border: 2px solid black;
   border-radius: 8px;
-  cursor: pointer;
 }
