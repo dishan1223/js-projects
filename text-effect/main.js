@@ -12,8 +12,8 @@ document.querySelector('h1').onmousemove = event => {
       return letters[Math.floor(Math.random()* 26)];
     }).join('');
     
-    if(iterations >= 5) clearInterval(interval);
+    if(iterations >= event.target.dataset.length) clearInterval(interval);
 
-    iterations += 1;
+    iterations += 1/3;
   }, 30);  
 }
