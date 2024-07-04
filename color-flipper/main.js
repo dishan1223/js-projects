@@ -1,9 +1,23 @@
-
-// custom cursor 
+//*************************************************************************************************
+//░█████╗░░█████╗░██╗░░░░░░█████╗░██████╗░  ███████╗██╗░░░░░██╗██████╗░██████╗░███████╗██████╗░
+//██╔══██╗██╔══██╗██║░░░░░██╔══██╗██╔══██╗  ██╔════╝██║░░░░░██║██╔══██╗██╔══██╗██╔════╝██╔══██╗
+//██║░░╚═╝██║░░██║██║░░░░░██║░░██║██████╔╝  █████╗░░██║░░░░░██║██████╔╝██████╔╝█████╗░░██████╔╝
+//██║░░██╗██║░░██║██║░░░░░██║░░██║██╔══██╗  ██╔══╝░░██║░░░░░██║██╔═══╝░██╔═══╝░██╔══╝░░██╔══██╗
+//╚█████╔╝╚█████╔╝███████╗╚█████╔╝██║░░██║  ██║░░░░░███████╗██║██║░░░░░██║░░░░░███████╗██║░░██║
+//░╚════╝░░╚════╝░╚══════╝░╚════╝░╚═╝░░╚═╝  ╚═╝░░░░░╚══════╝╚═╝╚═╝░░░░░╚═╝░░░░░╚══════╝╚═╝░░╚═╝
+//*************************************************************************************************
+// Custom cursor
 const cursorDot = document.querySelector('[data-cursor-dot]');
 const cursorOutline = document.querySelector('[data-cursor-outline]');
 
-window.addEventListener('mousemove', function(e){
+// Function to check if an element has a black background
+function isBGBlack(element) {
+  const computedStyle = getComputedStyle(element);
+  return computedStyle.backgroundColor === 'rgb(0, 0, 0)';
+}
+
+// Move custom cursor and change color if background is black
+window.addEventListener('mousemove', function(e) {
   const posX = e.clientX;
   const posY = e.clientY;
 
@@ -13,12 +27,19 @@ window.addEventListener('mousemove', function(e){
   cursorOutline.animate({
     left: `${posX}px`,
     top: `${posY}px`
+  }, { duration: 400, fill: "forwards" });
 
-  },{duration: 400, fill: "forwards"})
+  // Change cursor color if the background is black
+  if (isBGBlack(backgrnd)) {
+    cursorDot.style.background = 'white';
+    cursorOutline.style.borderColor = 'white';
+  } else {
+    cursorDot.style.background = 'black';
+    cursorOutline.style.borderColor = 'black';
+  }
+});
 
-})
-
-
+// Element selectors
 let backgrnd = document.querySelector('.app');
 let changeColor = document.getElementById('change-color');
 let randomColor = document.getElementById('random-color');
@@ -36,37 +57,37 @@ const hexColors = [
   "#FF5733", "#33FF57", "#3357FF", "#FF33A1", "#A133FF", "#33FFA1"
 ];
 
-
-
-
-function isValidHEX(hex){
+// Function to validate HEX color
+function isValidHEX(hex) {
   const hexRegex = /^#([0-9A-Fa-f]{6})$/;
   return hexRegex.test(hex);
 }
 
-function flipColor(){
+// Function to flip color based on input HEX value
+function flipColor() {
   let input = document.getElementById('hexinput').value;
   
-  if(isValidHEX(input)){
+  if (isValidHEX(input)) {
     let colorHEX = input;
     backgrnd.style.background = colorHEX;
-  }
-  else{
-    alert("Please enter a valie hex value")
+  } else {
+    alert("Please enter a valid HEX value");
   }
 }
 
-function getRandomIndex(){
-  let randomIndex = Math.floor(Math.random() * hexColors.length);
-  return randomIndex;
+// Function to get a random index
+function getRandomIndex() {
+  return Math.floor(Math.random() * hexColors.length);
 }
 
-
-function flipRandomColor(){
+// Function to flip color to a random HEX value
+function flipRandomColor() {
   let index = getRandomIndex();
   let color = hexColors[index];
   backgrnd.style.background = color;
 }
 
+// Event listeners
 randomColor.addEventListener('click', flipRandomColor);
 changeColor.addEventListener('click', flipColor);
+
