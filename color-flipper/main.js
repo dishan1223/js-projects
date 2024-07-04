@@ -6,6 +6,8 @@
 //╚█████╔╝╚█████╔╝███████╗╚█████╔╝██║░░██║  ██║░░░░░███████╗██║██║░░░░░██║░░░░░███████╗██║░░██║
 //░╚════╝░░╚════╝░╚══════╝░╚════╝░╚═╝░░╚═╝  ╚═╝░░░░░╚══════╝╚═╝╚═╝░░░░░╚═╝░░░░░╚══════╝╚═╝░░╚═╝
 //*************************************************************************************************
+
+
 // Custom cursor
 const cursorDot = document.querySelector('[data-cursor-dot]');
 const cursorOutline = document.querySelector('[data-cursor-outline]');
@@ -82,9 +84,12 @@ function getRandomIndex() {
 
 // Function to flip color to a random HEX value
 function flipRandomColor() {
+  let input = document.getElementById('hexinput');
+  
   let index = getRandomIndex();
   let color = hexColors[index];
   backgrnd.style.background = color;
+  input.value = color; 
 }
 
 // Event listeners
