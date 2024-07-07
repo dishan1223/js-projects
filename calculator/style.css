@@ -50,3 +50,7 @@ button{
   font-weight: bold;
   cursor: pointer;
 }
+
+.colored{
+  background: #F7970B;
+}
