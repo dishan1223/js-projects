@@ -7,7 +7,7 @@ function showNav() {
   if (menu.style.display === 'none' || menu.style.display === '') {
     console.log("gotcha!");
     // Optionally, you can toggle the display property
-    menu.style.display = 'block'; // or any other logic you want
+    menu.style.display = 'flex'; // or any other logic you want
     sections.style.display = 'block';
   } else {
     menu.style.display = 'none';
