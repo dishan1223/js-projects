@@ -4,14 +4,13 @@ function showNav() {
   const menu = document.querySelector('.menu');
   const sections = document.querySelector('.sections');
 
-  if (menu.style.display === 'none' || menu.style.display === '') {
+  if (menu.style.height === '0px' || menu.style.height === '') {
     console.log("gotcha!");
-    // Optionally, you can toggle the display property
-    menu.style.display = 'flex'; // or any other logic you want
-    sections.style.display = 'block';
+    menu.style.height = '300px'; // Expand to full height
+    sections.style.opacity = '1'; // Set opacity to 1
   } else {
-    menu.style.display = 'none';
-    sections.style.display = 'none';
+    menu.style.height = '0px'; // Collapse height
+    sections.style.opacity = '0'; // Set opacity to 0
   }
 }
 
