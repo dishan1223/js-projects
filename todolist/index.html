@@ -11,8 +11,24 @@
     <title>To Do</title>
   </head>
   <body>
+
     <div class="todo-container">
-      <h1 class="To-Do-head">To Do</h1>
+
+      <div class="pref-div">
+        <p class="border">
+          <input type="button" class="d-block mr-0 ml-auto" value="X">
+        </p>
+        <div class="mode">
+          <h3>Light Mode</h3>
+          
+          <button class="mode-switch">ON</button>
+        </div>         
+      </div>
+
+      <div class="head">
+        <h1 class="To-Do-head">To Do</h1>
+        <button class="prefs" type="button">X</button>  
+      </div>
       <div class="add-task-container">
         <input id="input-box" class="task-input" type="text" placeholder="Add Task">
         <button id="add-btn" class="add-btn">+</button>
