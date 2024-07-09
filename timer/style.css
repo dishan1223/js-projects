@@ -1,0 +1,9 @@
+*{
+  margin: 0px;
+}
+
+#app{
+  height: 100dvh;
+  width: 100%;
+  background: #19191c;
+}
