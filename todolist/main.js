@@ -1,3 +1,5 @@
+const { preview } = require("vite");
+
 document.addEventListener('DOMContentLoaded', () => {
   const inputBox = document.getElementById('input-box');
   const listContainer = document.getElementById('list-container');
@@ -40,5 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   showDataFromLocalStorage();
+  
+  const prefBtn = document.querySelector('#show-pref');
+  function showPrefs(){
+    const prefDiv = document.querySelector('.pref-div');
+    const modeMenu = document.querySelector('.mode');
+    prefDiv.style.display = 'flex';
+    modeMenu.style.display = 'block';
+  }
+  prefBtn.addEventListener('click', showPrefs);
+  
 });
+
+
+
+
 

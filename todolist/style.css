@@ -28,6 +28,7 @@ body {
   cursor: pointer;
 }
 .pref-div{
+  display: none;
   position: fixed;
   background: #2D3250;
   height: 100dvh;
