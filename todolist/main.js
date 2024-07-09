@@ -1,9 +1,9 @@
-const { preview } = require("vite");
-
 document.addEventListener('DOMContentLoaded', () => {
   const inputBox = document.getElementById('input-box');
   const listContainer = document.getElementById('list-container');
   const addButton = document.getElementById('add-btn');
+  const prefBtn = document.getElementById('show-pref');
+  const closePrefBtn = document.querySelector('.prefs');
 
   function addTask() {
     if (inputBox.value === "") {
@@ -22,39 +22,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
   addButton.addEventListener('click', addTask);
 
-  listContainer.addEventListener('click', function(e){
-    if(e.target.tagName == 'LI'){
+  listContainer.addEventListener('click', function(e) {
+    if (e.target.tagName === 'LI') {
       e.target.classList.toggle('checked');
       saveDataToLocalStorage();
-    }
-    else if(e.target.tagName === "SPAN"){
+    } else if (e.target.tagName === "SPAN") {
       e.target.parentElement.remove();
       saveDataToLocalStorage();
     }
-  }, false)
+  });
 
-  function saveDataToLocalStorage(){
+  function saveDataToLocalStorage() {
     localStorage.setItem("data", listContainer.innerHTML);
   }
 
-  function showDataFromLocalStorage(){
+  function showDataFromLocalStorage() {
     listContainer.innerHTML = localStorage.getItem("data");
   }
 
   showDataFromLocalStorage();
-  
-  const prefBtn = document.querySelector('#show-pref');
-  function showPrefs(){
+
+  function showPrefs() {
     const prefDiv = document.querySelector('.pref-div');
     const modeMenu = document.querySelector('.mode');
     prefDiv.style.display = 'flex';
     modeMenu.style.display = 'block';
   }
+
+  function hidePrefs() {
+    const prefDiv = document.querySelector('.pref-div');
+    prefDiv.style.display = 'none';
+  }
+
   prefBtn.addEventListener('click', showPrefs);
-  
+  closePrefBtn.addEventListener('click', hidePrefs);
 });
-
-
-
-
 
